@@ -81,7 +81,7 @@ function draw() {
     if(ground.x < 0){
       ground.x = ground.width/2;
     }
-    if(touches.length > 0&&trex.y >=150){
+   if(touches.length > 0&&trex.y >=720){//150
       trex.velocityY = -10;
       jumpsound.play();
       touches = [];
