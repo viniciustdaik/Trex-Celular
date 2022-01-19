@@ -1,9 +1,9 @@
 var trex, trex_running, trex_collided;
 var edges;
 var ground, ground_image;
-var cloud, cloud_image;
+var cloud, cloud_image, cloudG;
 var invisibleground;
-var cactu1, cactu2, cactu3, cactu4, cactu5, cactu6;
+var cactu1, cactu2, cactu3, cactu4, cactu5, cactu6, cactuG;
 var gameover, restart, gameoverimg, restartimg;
 var score = 0;
 var PLAY = 1;
@@ -73,7 +73,7 @@ function draw() {
   text("Score: "+score, width-100, 50);
   //console.log("Isto é: ", gamestate);
   if(gamestate == PLAY){
-    ground.velocityX = -5;
+    ground.velocityX = -(4+3*score/100);
     score = score+Math.round(getFrameRate()/30);
     if(score>0&&score%100==0){
       checkpointsound.play();
